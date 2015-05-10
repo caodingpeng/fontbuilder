@@ -67,11 +67,11 @@ int main(int argc, char *argv[])
     if (args.count() > 0)
     {
         QString configFile = args.at(0);
-        qDebug() << "Export with config file " << configFile;
+        //qDebug() << "Export with config file " << configFile;
         QFile file(configFile);
         file.open(QIODevice::ReadOnly | QIODevice::Text);
         QByteArray rawData =  file.readAll();
-        qDebug() << "With content:\n" << rawData;
+        //qDebug() << "With content:\n" << rawData;
         QJsonDocument document(QJsonDocument::fromJson(rawData));
 
         if(document.isNull())

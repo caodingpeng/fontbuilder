@@ -161,3 +161,7 @@ isEmpty(FREETYPE2CONFIG) {
 }
 OTHER_FILES += fontbuilder_ru.ts \
     fontbuilder_en.ts
+
+mac {
+    QMAKE_INFO_PLIST +=  Info.plist
+}
